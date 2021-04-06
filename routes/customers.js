@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Customer  = require('../models/client')
+const Customer  = require('../models/customer')
 
 // All Clients Route
 router.get('/', async (req , res)=>{
