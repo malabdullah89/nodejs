@@ -62,6 +62,7 @@ router.get('/new', async (req, res) =>{
 router.post('/', async (req, res) =>{
     const lawcase = new Lawcase({
         customer: req.body.customer,
+        opponent: req.body.opponent,
         customerStatus: req.body.customerStatus,
         caseType: req.body.caseType,
         court: req.body.court

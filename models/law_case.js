@@ -8,6 +8,12 @@ const LawcaseSchema = new mongoose.Schema({
         ref: 'Customer'
     },
 
+    opponent : {
+        type: String,
+        required: true,
+        ref: 'Customer'
+    },
+
     customerStatus : {
         type: String,
         required: true
