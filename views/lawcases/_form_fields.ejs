@@ -1,7 +1,7 @@
 <div class="form-group">
     
     <label>الموكل</label>
-    <select name="customer" class="form-control" >
+    <select name="customer" class="form-control selectpicker" data-live-search="true" >
     <% customers.forEach(customer => { %>
       <% if (customer.id === lawcase.customer) { %>
         <option selected label="<%= customer.name %>" value="<%= customer.id %>"><%= customer.name %></option>
