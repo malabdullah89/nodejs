@@ -4,13 +4,13 @@
     <select name="customer" class="form-control" >
     <% customers.forEach(customer => { %>
       <% if (customer.id === lawcase.customer) { %>
-        <option selected label="<%= customer.name %>" value="<%= customer.id %>">
+        <option selected label="<%= customer.name %>" value="<%= customer.id %>"></option>
       <% } else { %>
-        <option label="<%= customer.name %>" value="<%= customer.id %>">
+        <option label="<%= customer.name %>" value="<%= customer.id %>"></option>
          
       <% } %>
     <% }) %>
-    <option>تجربة</option>
+ 
     </select>
 
 </div>
