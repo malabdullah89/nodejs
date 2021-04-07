@@ -29,7 +29,7 @@ const Customer  = require('../models/customer')
 // All Cas Route
 router.get('/', async (req , res)=>{
     try {
-        const lawcases = await Lawcase.find({}).populate('customer', 'name')
+        const lawcases = await Lawcase.find({}).populate('customer')
         res.render('lawcases/index', {
             lawcases: lawcases,
             
