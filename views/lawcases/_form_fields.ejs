@@ -1,7 +1,7 @@
 <div class="form-group">
     
     <label>الموكل</label>
-    <select name="customer" >
+    <select name="customer" class="form-control" >
     <% customers.forEach(customer => { %>
       <% if (customer.id === lawcase.customer) { %>
         <option selected label="<%= customer.name %>" value="<%= customer.id %>">
