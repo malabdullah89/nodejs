@@ -30,7 +30,7 @@ const Customer  = require('../models/customer')
 router.get('/', async (req , res)=>{
     try {
         const lawcases = await Lawcase.find({}).populate('customer')
-        res.render('lawcases/index.ejs', {
+        res.render('lawcases/index', {
             lawcases: lawcases,
             
            
@@ -42,7 +42,7 @@ router.get('/', async (req , res)=>{
     }
 })
 
-// New Client Route
+// New Case Route
 router.get('/new', async (req, res) =>{
     try {
     const customers = await Customer.find({})
