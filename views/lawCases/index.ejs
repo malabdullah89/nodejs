@@ -18,7 +18,7 @@
                         <tbody>
                             <% lawcases.forEach(lawcase => { %>
                                 <tr>
-                                    <td><%= lawcase.customer %></td>
+                                    <td><%= lawcase.customer.name %></td>
                                     <td><%= lawcase.customerStatus %></td>
                                     <td><%= lawcase.caseType %></td>
                                     <td><%= lawcase.court %></td>
