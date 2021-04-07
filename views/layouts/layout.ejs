@@ -27,7 +27,15 @@
 			************ Vendor Css Files *************
 		************ -->
 		<!-- DateRange css -->
-		<link rel="stylesheet" href="/vendor/daterange/daterange.css" />		
+		<link rel="stylesheet" href="/vendor/daterange/daterange.css" />
+
+		<!-- Bootstrap Select CSS -->
+		<link rel="stylesheet" href="/vendor/bs-select/bs-select.css" />
+		
+		<!-- Data Tables -->
+		<link rel="stylesheet" href="/vendor/datatables/dataTables.bs4.css" />
+		<link rel="stylesheet" href="/vendor/datatables/dataTables.bs4-custom.css" />
+		<link href="/vendor/datatables/buttons.bs.css" rel="stylesheet" />
 
 
 	</head>
@@ -308,7 +316,7 @@
 		<!-- Quick settings start -->
 		<div class="quick-settings-box">
 			<div class="quick-settings-header">
-				<div class="date-container">Today <span class="date" id="today-date"></span></div>
+				<div class="date-container">اليوم <span class="date" id="today-date"></span></div>
 				<a href="#" class="quick-settings-box-close">
 					<i class="icon-circle-with-cross"></i>
 				</a>
@@ -394,13 +402,13 @@
 								2. ID must be different to every parent dropdown list item
 							-->
 							<a class="nav-link  active-page" href="/" id="" role="button" data-toggle="" aria-haspopup="true" aria-expanded="false">
-								<i class="icon-devices_other nav-icon"></i>
+								<i class="icon-home nav-icon"></i>
 								لوحة الإدارة
 							</a>
 		
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-								<i class="icon-package nav-icon"></i>
+								<i class="icon-user1 nav-icon"></i>
 								الموكلين
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="appsDropdown">
@@ -411,6 +419,37 @@
 									<a class="dropdown-item" href="/customers">قائمة الموكلين</a>
 								</li>
 								
+							</ul>
+						</li>
+
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="icon-file-text nav-icon"></i>
+								إدارة القضايا
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="appsDropdown">
+								<li>
+									<a class="dropdown-item" href="/lawcases/new">اضافة قضية جديدة</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="/lawcases/">متابعة قضية</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="icon-trending-up nav-icon"></i>
+								المحاسبة 
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="appsDropdown">
+								<li>
+									<a class="dropdown-item" href="/customers/new">فاتورة جديدة</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="/customers">سجل الفواتير</a>
+								</li>
 							</ul>
 						</li>
 						
@@ -488,6 +527,24 @@
 		<!-- Daterange -->
 		<script src="/vendor/daterange/daterange.js"></script>
 		<script src="/vendor/daterange/custom-daterange.js"></script>
+			<!-- Data Tables -->
+		<script src="/vendor/datatables/dataTables.min.js"></script>
+		<script src="/vendor/datatables/dataTables.bootstrap.min.js"></script>
+			
+			<!-- Custom Data tables -->
+		<script src="/vendor/datatables/custom/custom-datatables.js"></script>
+		<script src="/vendor/datatables/custom/fixedHeader.js"></script>
+	
+			<!-- Download / CSV / Copy / Print -->
+		<script src="/vendor/datatables/buttons.min.js"></script>
+	    <script src="/vendor/datatables/jszip.min.js"></script>
+		<script src="/vendor/datatables/pdfmake.min.js"></script>
+		<script src="/vendor/datatables/vfs_fonts.js"></script>
+		<script src="/vendor/datatables/html5.min.js"></script>
+		<script src="/vendor/datatables/buttons.print.min.js"></script>
+
+		<!-- Bootstrap Select JS -->
+		<script src="/vendor/bs-select/bs-select.min.js"></script>
 
 		<!-- Main Js Required -->
 		<script src="/js/main.js"></script>

@@ -1,0 +1,31 @@
+	<!-- Row start -->
+    <div class="row gutters">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            
+            <div class="table-container">
+                <div class="t-header">قائمة القضايا</div>
+                <div class="table-responsive">
+                    <table id="basicExample" class="table custom-table">
+                        <thead>
+                            <tr>
+                                <th>اسم الموكل</th>
+                                <th>الوضع القانوني</th>
+                                <th>نوع القضية</th>
+                                <th>المحكمة</th>
+            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% lawcases.forEach(lawcase => { %>
+                                <tr>
+                                    <td><%= lawcase.customer %></td>
+                                    <td><%= lawcase.customerStatus %></td>
+                                    <td><%= lawcase.caseType %></td>
+                                    <td><%= lawcase.court %></td>
+                                </tr>
+                            <% }) %>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>

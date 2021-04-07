@@ -7,6 +7,8 @@ const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index')
 const customerRouter = require('./routes/customers')
+const lawCaseRouter = require('./routes/law_cases')
+
 
 
  
@@ -26,6 +28,8 @@ db.on('err', err => console.error(err))
 db.once('open', ()=> console.log("Connected to MongoDB"))
 app.use('/', indexRouter)
 app.use('/customers', customerRouter)
+app.use('/lawcases', lawCaseRouter)
+
 
 
 
