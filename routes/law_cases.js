@@ -53,12 +53,12 @@ router.get('/new', async (req, res) =>{
 
      })
     } catch {
-        res.redirect('/lawcases')
+        res.redirect('lawcases')
 
     }
 })
 
-// Create Cilent Route
+// Create Law Case Route
 router.post('/', async (req, res) =>{
     const lawcase = new Lawcase({
         customer: req.body.customer,

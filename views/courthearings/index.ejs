@@ -1,0 +1,60 @@
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">جلسة جديدة</button>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myLargeModalLabel">اضافة جلسة جديدة</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/courthearings" method="POST">
+                    <%- include('_form_fields') %>
+                    <button type="submit" class="btn btn-primary">حفظ</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row gutters mt-4">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+        <div class="table-container">
+            <div class="t-header">الجلسات</div>
+            <div class="table-responsive">
+                <table id="copy-print-csv" class="table custom-table">
+                    <thead>
+                        <tr>
+                            <th>اسم الموكل</th>
+                            <th>القضية</th>
+                            <th>الخصم</th>
+                            <th>الجلسة</th>
+                            <th>المحكمة</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% courthearings.forEach(courthearing => { %>
+
+                        <tr>
+                            <td><%= courthearing.lawcase.customer.name %></td>
+                            <td><%= courthearing.lawcase.caseType %></td>
+                            <td><%= courthearing.lawcase.opponent %></td>
+                            <td><%= courthearing.courtdate %></td>
+                            <td><%= courthearing.lawcase.court %></td>
+                        </tr>
+                        <% }) %>
+
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>

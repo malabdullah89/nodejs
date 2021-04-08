@@ -8,6 +8,7 @@ const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
 const customerRouter = require('./routes/customers')
 const lawCaseRouter = require('./routes/law_cases')
+const courthearingRouter = require('./routes/courthearings')
 
 
 
@@ -26,9 +27,13 @@ mongoose.connect('mongodb+srv://admin:Joodm%401989@cluster0.bdxof.mongodb.net/ne
 const db = mongoose.connection
 db.on('err', err => console.error(err))
 db.once('open', ()=> console.log("Connected to MongoDB"))
+
+
+
 app.use('/', indexRouter)
 app.use('/customers', customerRouter)
 app.use('/lawcases', lawCaseRouter)
+app.use('/courthearings', courthearingRouter)
 
 
 

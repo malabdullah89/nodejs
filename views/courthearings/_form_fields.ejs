@@ -1,0 +1,25 @@
+<div class="form-group">
+    
+    <label>القضية</label>
+    <select name="lawcase" class="form-control selectpicker" data-live-search="true" >
+      <% lawcases.forEach(lawcase => { %>
+        <% if (lawcase.id === courthearing.lawcase) { %>
+          <option selected label="<%= lawcase.customer.name %>  <%= lawcase.caseType %>" value="<%= lawcase.id %>"><%= lawcase.customer.name %> - <%= lawcase.caseType %></option>
+        <% } else { %>
+          <option label="<%= lawcase.customer.name %>  <%= lawcase.caseType %>" value="<%= lawcase.id %>"><%= lawcase.customer.name %> - <%= lawcase.caseType %></option>
+        <% } %>
+      <% }) %>
+   
+      </select>
+ 
+</div>
+
+<div class="form-group">
+  <input type="text" class="form-control"  name="courtdate" placeholder="تاريخ الجلسة" required="">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control"  name="room" placeholder="القاعة" required="">
+</div>
+
+
