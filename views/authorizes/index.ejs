@@ -34,10 +34,9 @@
                     <thead>
                         <tr>
                             <th>اسم الموكل</th>
-                            <th>القضية</th>
-                            <th>الخصم</th>
-                            <th>الجلسة</th>
-                            <th>المحكمة</th>
+                            <th>تاريخ التوكيل</th>
+                            <th>صورة التوكيل</th>
+                            
 
                         </tr>
                     </thead>
@@ -46,11 +45,10 @@
 
                         <tr>
                             <td><%= authoriz.customer.name %></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><%= authoriz.authorizdate %></td>
+                            
                             <td>
-                                <a class="btn btn-primary" href="/authorizes/<%= authoriz.id %>">صورة التوكيل</a>
+                                <a class="btn btn-primary" href="/authorizes/<%= authoriz.id %>">مشاهدة</a>
                        
                             </td>
                         </tr>
