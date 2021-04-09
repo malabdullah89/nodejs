@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index')
 const customerRouter = require('./routes/customers')
 const lawCaseRouter = require('./routes/law_cases')
 const courthearingRouter = require('./routes/courthearings')
+const authorizRouter = require('./routes/authorizes')
 
 
 
@@ -18,7 +19,8 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ limit: '10mb', extended: false}))
+app.use(bodyParser.json()); 
+app.use(bodyParser.urlencoded({ limit: '20mb', extended: false}))
 
 
 const mongoose = require('mongoose')
@@ -34,6 +36,7 @@ app.use('/', indexRouter)
 app.use('/customers', customerRouter)
 app.use('/lawcases', lawCaseRouter)
 app.use('/courthearings', courthearingRouter)
+app.use('/authorizes', authorizRouter)
 
 
 

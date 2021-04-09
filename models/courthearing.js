@@ -17,8 +17,6 @@ const CourthearingSchema = new mongoose.Schema({
         type: String,
     },
 
-
-
 })
 
 
