@@ -58,6 +58,22 @@ router.post('/', async (req, res) =>{
   }
 })
 
+router.get('/:id', async (req, res) => {
+
+  try {
+    const authoriz = await Authoriz.findById(req.params.id)
+    res.render('authorizes/show', {
+      authoriz: authoriz
+
+    })
+
+  } catch {
+
+    res.redirect('/')
+  }
+})
+  
+
 function saveCover(authoriz, coverEncoded) {
   if (coverEncoded == null) return
   const cover = JSON.parse(coverEncoded)

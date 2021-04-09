@@ -1,4 +1,5 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"> توكيل جديد </button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"> توكيل جديد
+</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
@@ -11,7 +12,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form  method="POST">
+                <form method="POST">
                     <%- include('_form_fields') %>
                     <button type="submit" class="btn btn-primary">حفظ</button>
 
@@ -26,23 +27,39 @@
 <div class="row gutters mt-4">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12">
-            <% authorizes.forEach(authoriz => { %>
-            <figure class="user-card">
-                <figcaption>
-                    <a href="#" class="edit-card" data-toggle="modal" data-target="#editContact">
-                        <i class="icon-print"></i>
-                    </a>
-                    <img height="250" width="200" src="<%= authoriz.authorizImagePath %>" alt="Wafi Admin" class="">
-                    <h5 class="mt-4"><%= authoriz.customer.name %></h5>
-                    <ul class="list-group">
-                        <li class="list-group-item">تاريخ التوكيل : <%= authoriz.authorizdate %></li>
-                    </ul>
-                </figcaption>
-            </figure>
-            <% }) %>
-        </div>	
+        <div class="table-container">
+            <div class="t-header">الجلسات</div>
+            <div class="table-responsive">
+                <table id="copy-print-csv" class="table custom-table">
+                    <thead>
+                        <tr>
+                            <th>اسم الموكل</th>
+                            <th>القضية</th>
+                            <th>الخصم</th>
+                            <th>الجلسة</th>
+                            <th>المحكمة</th>
 
-        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% authorizes.forEach(authoriz => { %>
+
+                        <tr>
+                            <td><%= authoriz.customer.name %></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <a class="btn btn-primary" href="/authorizes/<%= authoriz.id %>">صورة التوكيل</a>
+                       
+                            </td>
+                        </tr>
+                        <% }) %>
+
+
+
+
+                    </tbody>
+                </table>
             </div>
         </div>
