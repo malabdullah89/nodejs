@@ -1,4 +1,4 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">جلسة جديدة</button>
+<button type="button" class="btn btn-primary btn-rounded" data-toggle="modal" data-target=".bd-example-modal-lg">جلسة جديدة</button>
 
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
     aria-hidden="true">
@@ -13,7 +13,7 @@
             <div class="modal-body">
                 <form action="/courthearings" method="POST">
                     <%- include('_form_fields') %>
-                    <button type="submit" class="btn btn-primary">حفظ</button>
+                    <button type="submit" class="btn btn-outline-primary btn-block btn-rounded mt-4">حفظ</button>
 
                 </form>
 
@@ -27,10 +27,10 @@
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
         <div class="table-container">
-            <div class="t-header">الجلسات</div>
+            <div class="t-header" style="background-color: #e29a00; color: azure;">الجلسات</div>
             <div class="table-responsive">
                 <table id="copy-print-csv" class="table custom-table">
-                    <thead>
+                    <thead style="background-color: #e29a0050">
                         <tr>
                             <th>اسم الموكل</th>
                             <th>القضية</th>

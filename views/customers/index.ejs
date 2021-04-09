@@ -1,4 +1,4 @@
-<h2>قائمة الموكلين</h2>
+<h2 style="color: #e29a00;">قائمة الموكلين</h2>
 <br>
 
 	<!-- Row start -->
@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="copy-print-csv" class="table custom-table">
-                            <thead>
+                            <thead style="background-color: #e29a0050">
                                 <tr>
                                     <th>اسم الموكل</th>
                                     <th>رقم المدني</th>
@@ -20,7 +20,7 @@
                             <tbody>
                             <% customers.forEach(customer => { %>
                                 <tr>
-                                    <td> <%= customer.name %></td>
+                                    <td><a href="/customers/<%= customer.id %>"><%= customer.name %></a> </td>
                                     <td><%= customer.civialIDNumber %></td>
                                     <td><%= customer.phoneNumber %></td>
                                     <td><%= customer.email %></td>

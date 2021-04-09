@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Customer  = require('../models/customer')
+const Lawcase = require('../models/law_case')
 
 // All Clients Route
 router.get('/', async (req , res)=>{
@@ -41,5 +42,23 @@ router.post('/', async (req, res) =>{
 
     }
 })
+
+
+router.get('/:id', async (req, res) => {
+
+    try {
+      const customer = await Customer.findById(req.params.id)
+      const lawcases = await Lawcase.find({ customer: customer.id}).populate('customer')
+      res.render('customers/show', {
+        lawcases: lawcases,
+        customer: customer
+  
+      })
+  
+    } catch {
+  
+      res.redirect('/')
+    }
+  })
 
 module.exports = router

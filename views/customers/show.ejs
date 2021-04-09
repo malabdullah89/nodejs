@@ -1,0 +1,56 @@
+<div class="row gutters mt-4">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+        <div class="table-container ">
+            <div class="t-header " style="background-color: #e29a00; color: azure;">المعلومات الشخصية</div>
+               <div class="mt-4">
+                   <h5> <span style="color: #e29a00;">الاسم : </span> <%= customer.name %></h5>
+               </div>
+               <div class="mt-3">
+                <h5> <span style="color: #e29a00;">الرقم المدني : </span> <%= customer.civialIDNumber %></h5>
+               </div>
+               <div class="mt-3">
+                <h5> <span style="color: #e29a00;">الهاتف :</span> <%= customer.phoneNumber %></h5>
+               </div>
+               <div class="mt-3">
+                <h5> <span style="color: #e29a00;">البريد الإلكتروني : </span> <%= customer.email %></h5>
+               </div> 
+               <div class="t-header mt-4 " style="background-color: #e29a00; color: azure;">القضايا</div>
+               <table id="copy-print-csv" class="table custom-table">
+                <thead style="background-color: #e29a0050">
+                    <tr>
+                        <th>اسم الموكل</th>
+                        <th>الوضع القانوني</th>
+                        <th>الخصم</th>
+                        <th>نوع القضية</th>
+                        <th>المحكمة</th>
+    
+                    </tr>
+                </thead>
+                <tbody>
+                    <% lawcases.forEach(lawcase => { %>
+                        
+                        <tr>
+                            <td><%= lawcase.customer.name %></td>
+                            <td><%= lawcase.customerStatus %></td>
+                            <td><%= lawcase.opponent %></td>
+                            <td><%= lawcase.caseType %></td>
+                            <td><%= lawcase.court %></td>
+                        </tr>
+                    <% }) %>
+                    
+                </tbody>
+            </table>
+
+
+               
+               
+                
+        </div>
+        </div>
+
+        
+
+        
+
+        
