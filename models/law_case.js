@@ -30,6 +30,9 @@ const LawcaseSchema = new mongoose.Schema({
         
     },
 
+
 })
+
+
 
 module.exports = mongoose.model('Lawcase', LawcaseSchema)

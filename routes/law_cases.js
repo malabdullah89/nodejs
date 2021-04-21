@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Lawcase  = require('../models/law_case')
 const Customer  = require('../models/customer')
+const Courthearing  = require('../models/courthearing')
 
 // // All Customers Route
 // router.get('/new', async (req, res) => {
@@ -29,14 +30,18 @@ const Customer  = require('../models/customer')
 // All Cas Route
 router.get('/', async (req , res)=>{
     try {
+        const courthearings = await Courthearing.find({}).populate('lawcase')
         const lawcases = await Lawcase.find({}).populate('customer')
+
         res.render('lawcases/index', {
-            lawcases: lawcases,
+            courthearings: courthearings,
+            lawcases: lawcases
             
            
          }) 
          console.log()
-    } catch {
+    } catch(e) {
+        console.log
         
         res.redirect('/')
     }
@@ -84,5 +89,22 @@ router.post('/', async (req, res) =>{
 
     }
 })
+
+router.get('/:id', async (req, res) => {
+
+    try {
+      const lawcase = await Lawcase.findById(req.params.id).populate('customer')
+      const courthearings = await Courthearing.find({ lawcase: lawcase.id})
+      res.render('lawcases/show', {
+        courthearings: courthearings,
+        lawcase: lawcase
+  
+      })
+  
+    } catch {
+  
+      res.redirect('/')
+    }
+  })
 
 module.exports = router

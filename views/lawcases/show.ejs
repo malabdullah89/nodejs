@@ -1,0 +1,27 @@
+<table id="copy-print-csv" class="table custom-table">
+    <thead style="background-color: #e29a0050">
+        <tr>
+            <th>تاريخ الجلسة</th>
+            <th>الوضع القانوني</th>
+            <th>الخصم</th>
+            <th>نوع القضية</th>
+            <th>المحكمة</th>
+            <th>الجلسة القادمة</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <% courthearings.forEach(courthearing => { %>
+            
+            <tr>
+                <td><%= courthearing.courtdate %></a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        <% }) %>
+        
+    </tbody>
+</table>
