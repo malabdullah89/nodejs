@@ -1,6 +1,6 @@
 // Rating
 $(function() {
-  $.fn.raty.defaults.path = 'img';
+  $.fn.raty.defaults.path = '/img';
   $('#rate1').raty({ score: 4 });
   $('#rate2').raty({ score: 5 });
   $('#rate3').raty({ score: 5 });

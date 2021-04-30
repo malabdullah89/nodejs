@@ -80,13 +80,13 @@
 
 /* Area Scheme One */
 .area-scheme-one .ct-series-a .ct-area {
-	fill: #1a8e5f;
+	fill: #e29a00;
 }
 .area-scheme-one .ct-series-a .ct-line {
-	stroke: #1a8e5f;
+	stroke: #e29a00;
 }
 .area-scheme-one .ct-series-a .ct-point {
-	stroke: #1a8e5f;
+	stroke: #e29a00;
 }
 .area-scheme-one .ct-area {
 	fill-opacity: .2;
@@ -159,14 +159,14 @@
 
 /* Bar Scheme One */
 .bar-scheme-one .ct-series-a .ct-bar {
-	stroke: #1a8e5f;
+	stroke:#e29a00;
 }
 .bar-scheme-one .ct-series-b .ct-bar {
-	stroke: #1d9f6c;
+	stroke: #e29a00;
 }
 .bar-scheme-one .ct-series-c .ct-bar {
-	stroke: #20b077;
-}
+	stroke: #e29a00;
+}rs
 
 
 /* Bar Scheme Two */

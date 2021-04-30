@@ -202,7 +202,7 @@
     }, _createCancel: function() {
       var that   = $(this),
           icon   = this.opt.path + this.opt.cancelOff,
-          cancel = $('<img />', { src: icon, alt: 'x', title: this.opt.cancelHint, 'class': 'raty-cancel' });
+          cancel = $('</img />', { src: icon, alt: 'x', title: this.opt.cancelHint, 'class': 'raty-cancel' });
 
       if (this.opt.cancelPlace == 'left') {
         that.prepend('&#160;').prepend(cancel);
@@ -222,14 +222,14 @@
 
         icon = this.opt.path + this.opt[icon];
 
-        $('<img />', { src : icon, alt: i, title: title }).appendTo(this);
+        $('</img />', { src : icon, alt: i, title: title }).appendTo(this);
 
         if (this.opt.space) {
           that.append((i < this.opt.number) ? '&#160;' : '');
         }
       }
 
-      return that.children('img');
+      return that.children('/img');
     }, _error: function(message) {
       $(this).html(message);
 
@@ -460,9 +460,9 @@
     single        : false,
     size          : 16,
     space         : true,
-    starHalf      : '../img/star-half.png',
-    starOff       : '../img/star-off.png',
-    starOn        : '../img/star-on.png',
+    starHalf      : '/img/star-half.png',
+    starOff       : '/img/star-off.png',
+    starOn        : '/img/star-on.png',
     target        : undefined,
     targetFormat  : '{score}',
     targetKeep    : false,
